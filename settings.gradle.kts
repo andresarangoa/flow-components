@@ -11,7 +11,9 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
     }
+
 }
 
 rootProject.name = "multiplatform-library-template"
 include(":library")
+include(":composeApp")

@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Button
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.Icon
@@ -28,23 +27,6 @@ import androidx.compose.ui.graphics.drawscope.drawIntoCanvas
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
-// Constants for reuse
-object ButtonConstants {
-    val PADDING = 16.dp
-    val HEIGHT = 56.dp
-    val BORDER_WIDTH = 1.dp
-    val CORNER_RADIUS = 8.dp
-    val DASH_WIDTH = 4.dp
-    val DASH_GAP = 4.dp
-    val ICON_SIZE = 16.dp
-    val SPACER_WIDTH = 8.dp
-
-    // Colors
-    val BUTTON_TEXT_COLOR = Color(0xFF6F7A8B)
-    val SURFACE_COLOR = Color(0xFFF6F7F9) // Light background color
-    val BORDER_COLOR = Color(0xFFCBD2E0) // Border color
-}
-
 /**
  * A button with dashed border and "Add Another Item" text.
  * Works across Android and iOS platforms.
@@ -52,50 +34,52 @@ object ButtonConstants {
  * @param modifier Modifier for the button
  * @param onAddClick The callback triggered when the button is clicked
  * @param text The text to display (defaults to "Add Another Item")
+ * @param style The style parameters for the button (defaults to AddAnotherItemButtonStyle.Default)
  */
 @Composable
 fun AddAnotherItemButton(
     modifier: Modifier = Modifier,
     onAddClick: () -> Unit,
-    text: String = "Add Another Item"
+    text: String = "Add Another Item",
+    style: AddAnotherItemButtonStyle = AddAnotherItemButtonStyle.Default
 ) {
     Box(
         modifier = modifier
-            .padding(ButtonConstants.PADDING)
+            .padding(style.padding)
             .fillMaxWidth()
     ) {
         Button(
             onClick = onAddClick,
             modifier = Modifier
                 .fillMaxWidth()
-                .height(ButtonConstants.HEIGHT)
+                .height(style.height)
                 .dashedBorder(
-                    width = ButtonConstants.BORDER_WIDTH,
-                    color = ButtonConstants.BORDER_COLOR,
-                    shape = RoundedCornerShape(ButtonConstants.CORNER_RADIUS),
-                    dashWidth = ButtonConstants.DASH_WIDTH,
-                    dashGap = ButtonConstants.DASH_GAP
+                    width = style.borderWidth,
+                    color = style.borderColor,
+                    shape = style.shape,
+                    dashWidth = style.dashWidth,
+                    dashGap = style.dashGap
                 ),
-            shape = RoundedCornerShape(ButtonConstants.CORNER_RADIUS),
+            shape = style.shape,
             colors = ButtonDefaults.buttonColors(
-                backgroundColor = ButtonConstants.SURFACE_COLOR,
-                contentColor = ButtonConstants.BUTTON_TEXT_COLOR
+                backgroundColor = style.backgroundColor,
+                contentColor = style.contentColor
             ),
             elevation = ButtonDefaults.elevation(
-                defaultElevation = 0.dp,
-                pressedElevation = 0.dp
+                defaultElevation = style.defaultElevation,
+                pressedElevation = style.pressedElevation
             )
         ) {
             Icon(
                 imageVector = Icons.Default.Add,
                 contentDescription = "Add",
-                modifier = Modifier.size(ButtonConstants.ICON_SIZE),
-                tint = ButtonConstants.BUTTON_TEXT_COLOR
+                modifier = Modifier.size(style.iconSize),
+                tint = style.contentColor
             )
-            Spacer(modifier = Modifier.width(ButtonConstants.SPACER_WIDTH))
+            Spacer(modifier = Modifier.width(style.spacerWidth))
             Text(
                 text = text,
-                color = ButtonConstants.BUTTON_TEXT_COLOR
+                color = style.contentColor
             )
         }
     }
