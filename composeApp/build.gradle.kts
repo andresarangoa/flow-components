@@ -9,6 +9,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
+    alias(libs.plugins.kotlinxSerialization)
+    `maven-publish`
 }
 
 kotlin {
@@ -55,13 +57,20 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activityCompose)
+            api(libs.koin.android)
+            api(libs.koin.core)
 
         }
         commonMain.dependencies {
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material)
+            implementation(compose.material3)
             implementation(compose.ui)
+            implementation(libs.decompose)
+            implementation(libs.decompose.extensions)
+            implementation(libs.koin.annotations)
+            implementation(libs.koin.compose)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodel)

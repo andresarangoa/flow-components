@@ -12,6 +12,6 @@ fun generateFibi() = sequence {
         b = c
     }
 }
-
+expect fun getCurrentMillis(): Long
 expect val firstElement: Int
 expect val secondElement: Int

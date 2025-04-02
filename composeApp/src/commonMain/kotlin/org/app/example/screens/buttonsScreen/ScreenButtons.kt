@@ -1,12 +1,10 @@
-package org.app.example.screens
+package org.app.example.screens.buttonsScreen
 
 import androidx.compose.runtime.Composable
 import io.github.kotlin.fibonacci.components.addAnotherItemButton.AddAnotherItemButton
 
 @Composable
-fun Buttons(){
+fun ScreenButtons(component: ScreenButtonComponent) {
 
-    AddAnotherItemButton{
-
-    }
+    AddAnotherItemButton{}
 }
