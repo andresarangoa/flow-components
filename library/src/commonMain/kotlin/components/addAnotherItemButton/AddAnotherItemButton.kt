@@ -39,9 +39,9 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun AddAnotherItemButton(
     modifier: Modifier = Modifier,
-    onAddClick: () -> Unit,
     text: String = "Add Another Item",
-    style: AddAnotherItemButtonStyle = AddAnotherItemButtonStyle.Default
+    style: AddAnotherItemButtonStyle = AddAnotherItemButtonStyle.Default,
+    onAddClick: () -> Unit,
 ) {
     Box(
         modifier = modifier
