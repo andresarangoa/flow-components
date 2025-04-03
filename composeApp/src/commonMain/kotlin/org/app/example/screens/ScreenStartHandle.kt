@@ -1,5 +1,8 @@
 package org.app.example.screens
 
+import ScreenIconsComponent
+import ScreenInputsComponent
+import ScreenOthersComponent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -7,7 +10,15 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Scaffold
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Category
 import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Input
+import androidx.compose.material.icons.filled.List
+import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.outlined.Category
+import androidx.compose.material.icons.outlined.Home
+import androidx.compose.material.icons.outlined.List
+import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -22,45 +33,54 @@ import org.app.example.components.bottomNavigationComponent.FlowNavigationBar
 import org.app.example.components.bottomNavigationComponent.FlowNavigationItem
 import org.app.example.navigation.ConfigurationMain
 import org.app.example.navigation.MainScreenComponent
+import org.app.example.screens.buttonsScreen.ScreenButtonComponent
+import org.app.example.screens.buttonsScreen.ScreenButtons
+import org.app.example.screens.iconsScreen.ScreenIcons
+import org.app.example.screens.inputsScreen.ScreenInputs
+import org.app.example.screens.screenOthers.ScreenOthers
 
 @Composable
-fun ScreenStartHandle(component: MainScreenComponent) {
+fun ScreenStartHandle(component: MainScreenComponent,
+                      buttonComponent: ScreenButtonComponent,
+                      iconsComponent: ScreenIconsComponent,
+                      inputsComponent: ScreenInputsComponent,
+                      othersComponent: ScreenOthersComponent
+                      ) {
     var currentScreen by remember { mutableStateOf("Home") }
     val currentConfiguration by component.getCurrentConfiguration().collectAsState()
     // Create navigation items
     val navItems = listOf(
         FlowNavigationItem(
             icon = Icons.Filled.Home,
-            iconSelected = Icons.Filled.Home,
+            iconSelected = Icons.Outlined.Home,
             label = "Buttons",
             screen = Screens.START.name,
             screenComponent = ConfigurationMain.ScreenHome
         ),
         FlowNavigationItem(
-            icon = Icons.Filled.Home,
-            iconSelected = Icons.Filled.Home,
+            icon = Icons.Filled.List,
+            iconSelected = Icons.Outlined.List,
             label = "Inputs",
             screen = Screens.INPUTS.name,
             iconSize = 24,
             screenComponent = ConfigurationMain.ScreenInputs
         ),
         FlowNavigationItem(
-            icon = Icons.Filled.Home,
-            iconSelected = Icons.Filled.Home,
+            icon = Icons.Filled.Category,
+            iconSelected = Icons.Outlined.Category,
             label = "Icons",
             screen = Screens.ICONS.name,
             iconSize = 24,
             screenComponent = ConfigurationMain.ScreenIcons
         ),
         FlowNavigationItem(
-            icon = Icons.Filled.Home,
-            iconSelected = Icons.Filled.Home,
+            icon = Icons.Filled.Settings,
+            iconSelected = Icons.Outlined.Settings,
             label = "Others",
             screen = Screens.OTHERS.name,
             screenComponent = ConfigurationMain.ScreenOthers
         )
     )
-
     Scaffold(
         bottomBar = {
             FlowNavigationBar(
@@ -87,18 +107,10 @@ fun ScreenStartHandle(component: MainScreenComponent) {
                 ConfigurationMain.ScreenOthers -> "Others"
             }
             when(currentConfiguration){
-                ConfigurationMain.ScreenHome -> component.navigateTo(
-                    configuration = ConfigurationMain.ScreenHome
-                )
-                ConfigurationMain.ScreenIcons -> component.navigateTo(
-                    configuration = ConfigurationMain.ScreenIcons
-                )
-                ConfigurationMain.ScreenInputs -> component.navigateTo(
-                    configuration = ConfigurationMain.ScreenInputs
-                )
-                ConfigurationMain.ScreenOthers -> component.navigateTo(
-                    configuration = ConfigurationMain.ScreenOthers
-                )
+                ConfigurationMain.ScreenHome -> ScreenButtons(buttonComponent)
+                ConfigurationMain.ScreenIcons -> ScreenIcons(iconsComponent)
+                ConfigurationMain.ScreenInputs -> ScreenInputs(inputsComponent)
+                ConfigurationMain.ScreenOthers -> ScreenOthers(othersComponent)
             }
         }
 

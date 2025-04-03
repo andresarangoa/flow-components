@@ -51,7 +51,13 @@ fun appContent(root: RootComponent) {
     ) { child ->
         FlowTheme {
                 when (val instance = child.instance) {
-                    is RootComponent.Child.ScreenStart -> ScreenStartHandle(instance.component)
+                    is RootComponent.Child.ScreenStart -> ScreenStartHandle(
+                        component = instance.component,
+                        buttonComponent = instance.buttonComponent,
+                        iconsComponent = instance.iconsComponent,
+                        inputsComponent = instance.inputsComponent,
+                        othersComponent = instance.othersComponent
+                    )
                 }
         }
     }

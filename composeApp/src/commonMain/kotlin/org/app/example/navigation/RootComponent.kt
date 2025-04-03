@@ -40,6 +40,18 @@ class RootComponent(
             Configuration.ScreenStart -> Child.ScreenStart(
                 MainScreenComponent(
                     componentContext = context
+                ),
+                ScreenButtonComponent(
+                    componentContext = context
+                ),
+                ScreenInputsComponent(
+                    componentContext = context
+                ),
+                ScreenIconsComponent(
+                    componentContext = context
+                ),
+                ScreenOthersComponent(
+                    componentContext = context
                 )
             )
         }
@@ -47,7 +59,13 @@ class RootComponent(
     }
 
     sealed class Child {
-        data class ScreenStart(val component: MainScreenComponent) : Child()
+        data class ScreenStart(
+            val component: MainScreenComponent,
+            val buttonComponent: ScreenButtonComponent,
+            val inputsComponent: ScreenInputsComponent,
+            val iconsComponent: ScreenIconsComponent,
+            val othersComponent: ScreenOthersComponent
+        ) : Child()
     }
 
     @Serializable

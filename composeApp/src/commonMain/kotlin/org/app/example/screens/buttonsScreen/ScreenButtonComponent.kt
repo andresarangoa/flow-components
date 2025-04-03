@@ -7,8 +7,8 @@ import org.app.example.navigation.ScreenStartEvent
 
 class ScreenButtonComponent(
     componentContext: ComponentContext,
-    private val onNavigateToScreenLogin: (String) -> Unit,
-    private val onNavigateToScreenRegister: () -> Unit
+    private val onNavigateToScreenLogin: (String) -> Unit ={},
+    private val onNavigateToScreenRegister: () -> Unit ={}
 ): ComponentContext by componentContext {
 
     private var _text = MutableValue("")
