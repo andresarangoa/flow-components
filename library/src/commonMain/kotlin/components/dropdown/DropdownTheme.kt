@@ -12,6 +12,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.Dp
 import components.AppColorScheme
 import components.AppColors
+import components.foundations.RobotoTypography
 import components.inputs.basic.DefaultInputTheme
 import io.github.kotlin.fibonacci.data.model.ConstantsValuesDp
 import io.github.kotlin.fibonacci.data.model.ConstantsValuesDp.value_dp_2
@@ -24,29 +25,30 @@ data class DefaultDropDownTheme(
     var tint: Color = AppColors.black
 )
 
-
 @Composable
 fun defaultDropdownTheme(
     dropdownModifier: Modifier = Modifier,
-    customColors: ProvidableCompositionLocal<AppColorScheme>?= null ,
+    customColors: ProvidableCompositionLocal<AppColorScheme>? = null,
     width: Dp? = null,
-    textStyle: TextStyle = TextStyle()
+    textStyle: TextStyle = RobotoTypography().bodyMedium.copy(
+        customColors?.current?.textPrimary ?: Color.White
+    )
 ) = DefaultDropDownTheme(
     defaultInputTheme = DefaultInputTheme(
-        borderColor = customColors?.current?.borderSoft?:Color.Unspecified,
-        borderColorFocused = customColors?.current?.borderBold?:Color.Unspecified,
+        borderColor = customColors?.current?.borderSoft ?: Color.Unspecified,
+        borderColorFocused = customColors?.current?.borderBold ?: Color.Unspecified,
         modifier = Modifier
             .padding(vertical = value_dp_2, horizontal = ConstantsValuesDp.value_dp_16)
             .then(if (width == null) Modifier.fillMaxWidth() else Modifier.width(width))
             .height(ConstantsValuesDp.value_dp_55)
             .clip(shape = MaterialTheme.shapes.small)
-            .background(customColors?.current?.surfaceFilled?:Color.White),
+            .background(customColors?.current?.surfaceFilled ?: Color.White),
         hintModifier = Modifier.padding(
             vertical = ConstantsValuesDp.value_dp_4
         ),
-        textStyle =textStyle
+        textStyle = textStyle
     ),
-    backgroundInput = customColors?.current?.surfaceFilled?:Color.White,
+    backgroundInput = customColors?.current?.surfaceFilled ?: Color.White,
     dropdownModifier = dropdownModifier
 )
 
@@ -64,7 +66,7 @@ fun filledDropdownTheme(
         hintModifier = Modifier.padding(vertical = ConstantsValuesDp.value_dp_4),
 //        textStyle = RobotoTypography.bodyMedium.copy(color = customColors.current.textPrimary),
     ),
-    backgroundInput = customColors?.current?.surfaceFilled?:Color.White,
+    backgroundInput = customColors?.current?.surfaceFilled ?: Color.White,
     dropdownModifier = dropdownModifier,
 )
 

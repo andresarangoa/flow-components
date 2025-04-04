@@ -10,12 +10,3 @@ actual fun getCurrentMillis(): Long {
 actual fun getDecimalFormatter(): DecimalFormatterI {
     TODO("Not yet implemented")
 }
-
-@Composable
-actual fun getPlatformColorScheme(
-    darkTheme: Boolean,
-    darkThemeGenerated: AppColorScheme,
-    lightColorScheme: AppColorScheme
-): AppColorScheme {
-    TODO("Not yet implemented")
-}

@@ -85,6 +85,7 @@ data class AppColorScheme(
     val borderCircular: Color = Color.Unspecified,
     val borderSoft: Color = Color.Unspecified,
     val borderBold: Color = Color.Unspecified,
+    val borderPrimary: Color = Color.Unspecified,
     val borderLight: Color = Color.Unspecified,
     val borderError: Color = Color.Unspecified
 )

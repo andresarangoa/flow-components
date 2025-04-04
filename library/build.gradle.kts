@@ -11,7 +11,7 @@ plugins {
 }
 
 group = "io.github.andresarangoa"
-version = "0.1.0-beta01" // Using beta version for testing
+version = "0.1.0-beta03" // Using beta version for testing
 
 kotlin {
     // Your existing configuration
@@ -60,6 +60,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 }
+
 
 // Keep vanniktech config for Maven Central (comment out for beta releases)
 mavenPublishing {

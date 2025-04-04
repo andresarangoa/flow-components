@@ -19,6 +19,7 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.Dp
 import components.AppColors
+import components.foundations.RobotoTypography
 import components.inputs.dropDown.DropdownFlagsAndPhone
 import components.inputs.dropDown.Padding
 import data.model.DefaultInputState
@@ -56,7 +57,7 @@ internal fun DecorationBoxBasicTextField(
                 if (isInputPhoneType) {
                     Spacer(Modifier.height(ConstantsValuesDp.value_dp_14))
                 }
-                PlaceholderInput(state, modifier)
+                PlaceholderInput(state, modifier, theme)
                 innerTextField()
             }
         }
@@ -101,7 +102,8 @@ fun HorizontalSpacer(
 fun PlaceholderInput(
     state: DefaultInputState,
     modifier: Modifier,
-    textStyle: TextStyle = TextStyle()
+    theme: DefaultInputTheme = defaultTheme(),
+    textStyle: TextStyle = RobotoTypography().bodySmall.copy(color = theme.labelColor)
 ) {
     if (state.isLabelVisible()) {
         if (state.inputType != InputTypes.PHONE) {

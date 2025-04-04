@@ -43,7 +43,7 @@ fun DefaultInputTheme.getHintStateIcon(state: DefaultInputState): DrawableResour
 
 @Composable
 fun DefaultInputTheme.getHintBorderColor(state: DefaultInputState, borderColor: Color): Color =
-    if (state.showError) this.getHintStateColor(state = state) else borderColor
+    if (state.showError || state.showSuccess) this.getHintStateColor(state = state) else borderColor
 
 
 @Composable

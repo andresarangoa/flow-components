@@ -1,13 +1,11 @@
 package org.app.example.navigation
 
-
 import ScreenIconsComponent
 import ScreenInputsComponent
 import ScreenOthersComponent
 import com.arkivanov.decompose.ComponentContext
 import com.arkivanov.decompose.ExperimentalDecomposeApi
 import com.arkivanov.decompose.router.stack.StackNavigation
-import com.arkivanov.decompose.router.stack.bringToFront
 import com.arkivanov.decompose.router.stack.childStack
 import com.arkivanov.decompose.router.stack.replaceAll
 import kotlinx.serialization.Serializable

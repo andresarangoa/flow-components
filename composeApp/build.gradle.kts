@@ -10,6 +10,7 @@ plugins {
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.kotlinxSerialization)
+
     `maven-publish`
 }
 
@@ -79,6 +80,9 @@ kotlin {
             implementation(project(":library"))
         }
     }
+    // Other configurations
+
+
 
 }
 
@@ -109,6 +113,8 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 }
+
+
 
 dependencies {
     debugImplementation(compose.uiTooling)

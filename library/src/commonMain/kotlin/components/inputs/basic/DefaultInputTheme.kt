@@ -20,6 +20,7 @@ import androidx.compose.ui.unit.sp
 import components.AppColorScheme
 import components.AppColors
 import components.foundation.CustomIconRes
+import components.foundations.RobotoTypography
 import io.github.kotlin.fibonacci.data.model.ConstantsValuesDp.value_dp_16
 import io.github.kotlin.fibonacci.data.model.ConstantsValuesDp.value_dp_2
 import io.github.kotlin.fibonacci.data.model.ConstantsValuesDp.value_dp_4
@@ -43,7 +44,9 @@ data class DefaultInputTheme(
     var iconErrorColor: Color = AppColors.error600,
     var background: Color = AppColors.white,
     var visualTransformation: VisualTransformation = VisualTransformation.None,
-    var height: Dp = 55.dp
+    var height: Dp = 55.dp,
+    var labelColor: Color = AppColors.neutral200
+
 )
 
 @Composable
@@ -51,9 +54,13 @@ fun defaultTheme(
     paddingVertical:Dp = value_dp_4,
     paddingHorizontal: Dp= value_dp_16,
     customColors: ProvidableCompositionLocal<AppColorScheme>?= null,
+    textStyle: TextStyle = RobotoTypography().bodySmall
+        .copy(color = customColors?.current?.textPrimary?:Color.Unspecified)
 ) = DefaultInputTheme(
     borderColor = customColors?.current?.borderSoft?:Color.Unspecified,
     borderColorFocused = customColors?.current?.borderBold?:Color.Unspecified,
+    labelColor = customColors?.current?.textSecondary?:Color.Unspecified,
+    textStyle =textStyle ,
     modifier = Modifier
         .padding(horizontal = paddingHorizontal, vertical = paddingVertical)
         .fillMaxWidth()

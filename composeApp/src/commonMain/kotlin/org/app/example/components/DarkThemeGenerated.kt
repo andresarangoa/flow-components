@@ -4,7 +4,7 @@ import components.AppColorScheme
 
 val DarkThemeGenerated = AppColorScheme(
     surfacePrimary = AppColorsGenerated.black,
-    surfaceSecondary = AppColorsGenerated.slate500,
+    surfaceSecondary = AppColorsGenerated.neutral100D,
     surfaceTertiary = AppColorsGenerated.neutral100D,
     surfaceQuaternary = AppColorsGenerated.slate800,
     surfaceQuaternaryInput = AppColorsGenerated.slate500,
@@ -26,6 +26,7 @@ val DarkThemeGenerated = AppColorScheme(
     borderCircular = AppColorsGenerated.neutral500D,
     borderSoft = AppColorsGenerated.neutral700D,
     borderBold = AppColorsGenerated.white,
+    borderPrimary = AppColorsGenerated.neutral400D,
     borderLight = AppColorsGenerated.black,
     borderError = AppColorsGenerated.error500D,
     textPrimary = AppColorsGenerated.white,

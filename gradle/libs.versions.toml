@@ -15,6 +15,7 @@ koinAnnotations = "2.0.0-RC1"
 koin-bom = "3.5.3"
 uiAndroid = "1.7.8"
 core = "1.15.0"
+animationCoreAndroid = "1.7.8"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -31,6 +32,7 @@ koin-bom = { module = "io.insert-koin:koin-bom", version.ref = "koin-bom" }
 koin-annotations = { module = "io.insert-koin:koin-annotations", version.ref = "koinAnnotations" }
 androidx-ui-android = { group = "androidx.compose.ui", name = "ui-android", version.ref = "uiAndroid" }
 androidx-core = { group = "androidx.core", name = "core", version.ref = "core" }
+androidx-animation-core-android = { group = "androidx.compose.animation", name = "animation-core-android", version.ref = "animationCoreAndroid" }
 
 [plugins]
 androidLibrary = { id = "com.android.library", version.ref = "agp" }

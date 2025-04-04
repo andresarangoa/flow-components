@@ -2,10 +2,13 @@ package io.github.kotlin.fibonacci.components.addAnotherItemButton
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.ProvidableCompositionLocal
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import components.AppColorScheme
 
 /**
  * A class containing all style parameters for the AddAnotherItemButton.
@@ -13,7 +16,7 @@ import androidx.compose.ui.unit.dp
  */
 data class AddAnotherItemButtonStyle(
     // Layout dimensions
-    val padding: PaddingValues = PaddingValues(16.dp),
+    val padding: PaddingValues = PaddingValues(0.dp),
     val height: Dp = 56.dp,
     val iconSize: Dp = 16.dp,
     val spacerWidth: Dp = 8.dp,
@@ -37,6 +40,17 @@ data class AddAnotherItemButtonStyle(
         /**
          * Default style matching the original implementation
          */
+        @Composable
+        fun defaultTheme(
+            customColorScheme: ProvidableCompositionLocal<AppColorScheme>? = null,
+        ): AddAnotherItemButtonStyle =
+            AddAnotherItemButtonStyle(
+                borderColor = customColorScheme?.current?.borderBold ?: Color.Unspecified,
+                backgroundColor = customColorScheme?.current?.surfaceSecondary
+                    ?: Color.Unspecified,
+            )
+
+
         val Default = AddAnotherItemButtonStyle()
 
         /**

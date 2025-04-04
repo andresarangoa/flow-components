@@ -6,6 +6,7 @@ import ScreenOthersComponent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.calculateStartPadding
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Scaffold
@@ -27,8 +28,10 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import io.github.kotlin.fibonacci.data.model.ConstantsValuesDp
 import org.app.example.Screens
 import org.app.example.components.LocalCustomColorsPalette
+import org.app.example.components.LocalCustomColorsPaletteFlow
 import org.app.example.components.bottomNavigationComponent.FlowNavigationBar
 import org.app.example.components.bottomNavigationComponent.FlowNavigationItem
 import org.app.example.navigation.ConfigurationMain
@@ -40,12 +43,13 @@ import org.app.example.screens.inputsScreen.ScreenInputs
 import org.app.example.screens.screenOthers.ScreenOthers
 
 @Composable
-fun ScreenStartHandle(component: MainScreenComponent,
-                      buttonComponent: ScreenButtonComponent,
-                      iconsComponent: ScreenIconsComponent,
-                      inputsComponent: ScreenInputsComponent,
-                      othersComponent: ScreenOthersComponent
-                      ) {
+fun ScreenStartHandle(
+    component: MainScreenComponent,
+    buttonComponent: ScreenButtonComponent,
+    iconsComponent: ScreenIconsComponent,
+    inputsComponent: ScreenInputsComponent,
+    othersComponent: ScreenOthersComponent
+) {
     var currentScreen by remember { mutableStateOf("Home") }
     val currentConfiguration by component.getCurrentConfiguration().collectAsState()
     // Create navigation items
@@ -56,24 +60,21 @@ fun ScreenStartHandle(component: MainScreenComponent,
             label = "Buttons",
             screen = Screens.START.name,
             screenComponent = ConfigurationMain.ScreenHome
-        ),
-        FlowNavigationItem(
+        ), FlowNavigationItem(
             icon = Icons.Filled.List,
             iconSelected = Icons.Outlined.List,
             label = "Inputs",
             screen = Screens.INPUTS.name,
             iconSize = 24,
             screenComponent = ConfigurationMain.ScreenInputs
-        ),
-        FlowNavigationItem(
+        ), FlowNavigationItem(
             icon = Icons.Filled.Category,
             iconSelected = Icons.Outlined.Category,
             label = "Icons",
             screen = Screens.ICONS.name,
             iconSize = 24,
             screenComponent = ConfigurationMain.ScreenIcons
-        ),
-        FlowNavigationItem(
+        ), FlowNavigationItem(
             icon = Icons.Filled.Settings,
             iconSelected = Icons.Outlined.Settings,
             label = "Others",
@@ -97,16 +98,13 @@ fun ScreenStartHandle(component: MainScreenComponent,
                 unselectedItemColor = LocalCustomColorsPalette.current.textBottomBanner,
                 indicatorColor = LocalCustomColorsPalette.current.surfaceOnTabBarBottom
             )
-        }
-    ) {innerPadding ->
-        Box(modifier = Modifier.padding(innerPadding)) {
-            currentScreen = when (currentConfiguration) {
-                ConfigurationMain.ScreenHome -> "Buttons"
-                ConfigurationMain.ScreenIcons -> "Icons"
-                ConfigurationMain.ScreenInputs -> "Inputs"
-                ConfigurationMain.ScreenOthers -> "Others"
-            }
-            when(currentConfiguration){
+        }) { innerPadding ->
+        Box(
+            modifier = Modifier.padding(
+                top = innerPadding.calculateTopPadding()
+            ).background(LocalCustomColorsPaletteFlow.current.surfacePrimary),
+        ) {
+            when (currentConfiguration) {
                 ConfigurationMain.ScreenHome -> ScreenButtons(buttonComponent)
                 ConfigurationMain.ScreenIcons -> ScreenIcons(iconsComponent)
                 ConfigurationMain.ScreenInputs -> ScreenInputs(inputsComponent)
