@@ -16,6 +16,12 @@ import androidx.compose.material.icons.filled.*
 import androidx.compose.material.icons.rounded.*
 import androidx.compose.runtime.Stable
 import androidx.compose.ui.graphics.vector.ImageVector
+import io.github.andresarangoa.library.generated.resources.Res
+import io.github.andresarangoa.library.generated.resources.*
+import io.github.andresarangoa.library.generated.resources.icon_add
+import io.github.andresarangoa.library.generated.resources.icon_apple
+import io.github.andresarangoa.library.generated.resources.icon_arrowback
+import org.jetbrains.compose.resources.DrawableResource
 
 /**
  * A class to hold all custom icons used in the library.
@@ -194,5 +200,87 @@ fun getCustomIconBasedOnTheme(isDarkTheme: Boolean): CustomIcon {
         CustomIconDark
     } else {
         CustomIconLight
+    }
+}
+
+object CustomIconRes {
+    val add = Res.drawable.icon_add
+    val apple = Res.drawable.icon_apple
+    val arrowBack = Res.drawable.icon_arrowback
+    val arrowDownward = Res.drawable.icon_arrowdownward
+    val arrowDropDown = Res.drawable.icon_arrowdropdown
+    val arrowForward = Res.drawable.icon_arrowforward
+    val arrowUpward = Res.drawable.icon_arrowupward
+    val cancel = Res.drawable.icon_cancel
+    val check = Res.drawable.icon_check
+    val checkCircle = Res.drawable.icon_checkcircle
+    val checkCircleFilled = Res.drawable.icon_checkcirclefilled
+    val chevronLeft = Res.drawable.icon_chevronleft
+    val chevronRight = Res.drawable.icon_chevronright
+    val close = Res.drawable.icon_close
+    val creditCard = Res.drawable.icon_creditcard
+    val creditCardFilled = Res.drawable.icon_creditcardfilled
+    val error = Res.drawable.icon_error
+    val errorFilled = Res.drawable.icon_errorfilled
+    val expandLess = Res.drawable.icon_expandless
+    val expandMore = Res.drawable.icon_expandmore
+    val facebook = Res.drawable.icon_facebook
+    val google = Res.drawable.icon_google
+    val home = Res.drawable.icon_home
+    val homeFilled = Res.drawable.icon_homefilled
+    val image = Res.drawable.icon_image
+    val moreHorizontal = Res.drawable.icon_morehorizontal
+    val paid = Res.drawable.icon_paid
+    val paidFilled = Res.drawable.icon_paidfilled
+    val send = Res.drawable.icon_send
+    val settings = Res.drawable.icon_settings
+    val settingsFilled = Res.drawable.icon_settingsfilled
+    val trendingDown = Res.drawable.icon_trendingdown
+    val trendingUp = Res.drawable.icon_trendingup
+    val visibilityOff = Res.drawable.icon_visibilityoff
+    val visibilityOn = Res.drawable.icon_visibilityon
+    val closeBottomSheet = Res.drawable.close
+    val dragHandleBottomSheet = Res.drawable.drag_handle
+
+    fun getAllIcons(): List<Pair<DrawableResource, String>> {
+        return listOf(
+            add to "add",
+            apple to "apple",
+            arrowBack to "arrowBack",
+            arrowDownward to "arrowDownward",
+            arrowDropDown to "arrowDropDown",
+            arrowForward to "arrowForward",
+            arrowUpward to "arrowUpward",
+            cancel to "cancel",
+            check to "check",
+            checkCircle to "checkCircle",
+            checkCircleFilled to "checkCircleFilled",
+            chevronLeft to "chevronLeft",
+            chevronRight to "chevronRight",
+            close to "close",
+            creditCard to "creditCard",
+            creditCardFilled to "creditCardFilled",
+            error to "error",
+            errorFilled to "errorFilled",
+            expandLess to "expandLess",
+            expandMore to "expandMore",
+            facebook to "facebook",
+            google to "google",
+            home to "home",
+            homeFilled to "homeFilled",
+            image to "image",
+            moreHorizontal to "moreHorizontal",
+            paid to "paid",
+            paidFilled to "paidFilled",
+            send to "send",
+            settings to "settings",
+            settingsFilled to "settingsFilled",
+            trendingDown to "trendingDown",
+            trendingUp to "trendingUp",
+            visibilityOff to "visibilityOff",
+            visibilityOn to "visibilityOn",
+            closeBottomSheet to "closeBottomSheet",
+            dragHandleBottomSheet to "dragHandleBottomSheet"
+        )
     }
 }

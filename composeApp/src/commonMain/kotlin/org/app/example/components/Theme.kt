@@ -2,13 +2,14 @@ package org.app.example.components
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Typography
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
-import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
+import components.AppColorScheme
 
 /**
  * FlowColors - Defines the color palette for Flow Components
@@ -180,6 +181,29 @@ fun FlowTheme(
         // Use Material3 theme as the base
         MaterialTheme(
             colorScheme = colorScheme,
+            content = content
+        )
+    }
+}
+
+
+val LocalCustomColorsPaletteFlow = staticCompositionLocalOf { AppColorScheme() }
+
+@Composable
+fun FlowUITheme(
+    darkTheme: Boolean = isSystemInDarkTheme(),
+    content: @Composable () -> Unit
+) {
+
+    // logic for which custom palette to use
+    val customColorsPalette =
+        if (darkTheme) DarkThemeGenerated
+        else LightThemeGenerated
+
+    // Provide colors in CompositionLocal
+    CompositionLocalProvider(LocalCustomColorsPaletteFlow provides customColorsPalette) {
+        MaterialTheme(
+            typography = Typography(),
             content = content
         )
     }
