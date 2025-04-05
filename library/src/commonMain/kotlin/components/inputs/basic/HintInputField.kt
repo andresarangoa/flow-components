@@ -13,8 +13,8 @@ import components.utils.getHintTextColor
 import data.model.DefaultInputState
 import io.github.andresarangoa.library.generated.resources.Res
 import io.github.andresarangoa.library.generated.resources.content_description_arrows
-import io.github.kotlin.fibonacci.components.buttons.rememberDefaultInputState
-import io.github.kotlin.fibonacci.data.model.ConstantsValuesDp
+import io.github.kotlin.components.buttons.rememberDefaultInputState
+import io.github.kotlin.data.model.ConstantsValuesDp
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 

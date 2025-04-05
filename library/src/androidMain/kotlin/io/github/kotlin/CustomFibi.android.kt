@@ -1,4 +1,4 @@
-package io.github.kotlin.fibonacci
+package io.github.kotlin
 
 import android.app.Activity
 import android.content.Context
@@ -9,7 +9,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import components.AppColorScheme
-import io.github.kotlin.fibonacci.data.model.Constants.LIMIT_SYMBOL_CURRENCY
+import io.github.kotlin.data.model.Constants.LIMIT_SYMBOL_CURRENCY
 import java.text.DecimalFormatSymbols
 import java.util.Locale
 

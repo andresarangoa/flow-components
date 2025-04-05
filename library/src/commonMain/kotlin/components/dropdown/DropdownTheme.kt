@@ -14,8 +14,8 @@ import components.AppColorScheme
 import components.AppColors
 import components.foundations.RobotoTypography
 import components.inputs.basic.DefaultInputTheme
-import io.github.kotlin.fibonacci.data.model.ConstantsValuesDp
-import io.github.kotlin.fibonacci.data.model.ConstantsValuesDp.value_dp_2
+import io.github.kotlin.data.model.ConstantsValuesDp
+import io.github.kotlin.data.model.ConstantsValuesDp.value_dp_2
 
 
 data class DefaultDropDownTheme(

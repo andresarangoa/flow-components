@@ -9,7 +9,7 @@ import androidx.compose.material3.SelectableDates
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberDatePickerState
 import androidx.compose.runtime.Composable
-import io.github.kotlin.fibonacci.getCurrentMillis
+import io.github.kotlin.getCurrentMillis
 
 
 @OptIn(ExperimentalMaterial3Api::class)

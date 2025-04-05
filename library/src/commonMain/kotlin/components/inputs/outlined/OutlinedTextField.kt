@@ -8,7 +8,7 @@ import components.inputs.basic.DefaultInputTheme
 import components.inputs.basic.defaultTheme
 import components.utils.getBorderByStateDefault
 import data.model.DefaultInputState
-import io.github.kotlin.fibonacci.components.buttons.rememberDefaultInputState
+import io.github.kotlin.components.buttons.rememberDefaultInputState
 
 @Composable
 fun OutlinedTextField(

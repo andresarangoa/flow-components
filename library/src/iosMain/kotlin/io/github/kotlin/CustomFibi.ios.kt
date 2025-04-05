@@ -1,10 +1,7 @@
-package io.github.kotlin.fibonacci
+package io.github.kotlin
 
-import androidx.compose.runtime.Composable
-import components.AppColorScheme
 import io.github.kotlin.fibonacci.data.model.Constants.LIMIT_SYMBOL_CURRENCY
 import platform.Foundation.NSDate
-import platform.Foundation.NSUserDefaults
 import platform.Foundation.timeIntervalSince1970
 
 actual fun getCurrentMillis(): Long {

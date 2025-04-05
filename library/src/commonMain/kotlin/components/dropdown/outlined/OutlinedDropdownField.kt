@@ -9,9 +9,9 @@ import components.dropdown.basic.BasicDropdownField
 import components.dropdown.defaultDropdownTheme
 import components.dropdown.getBorderDropdownByStateDefault
 import data.model.DefaultInputState
-import io.github.kotlin.fibonacci.components.buttons.rememberDefaultDropdownState
-import io.github.kotlin.fibonacci.components.buttons.rememberDefaultInputState
-import io.github.kotlin.fibonacci.data.model.Constants.OUTLINED_INPUT_DROPDOWN_ID
+import io.github.kotlin.components.buttons.rememberDefaultDropdownState
+import io.github.kotlin.components.buttons.rememberDefaultInputState
+import io.github.kotlin.data.model.Constants.OUTLINED_INPUT_DROPDOWN_ID
 
 @Composable
 fun <T>OutlinedDropdownField(

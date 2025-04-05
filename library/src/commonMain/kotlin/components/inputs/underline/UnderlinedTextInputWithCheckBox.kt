@@ -1,4 +1,4 @@
-package org.app.controlbill.components.inputs.underline
+package components.inputs.underline
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -26,7 +26,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import components.AppColorScheme
-import io.github.kotlin.fibonacci.data.model.ConstantsValuesDp
+import io.github.kotlin.data.model.ConstantsValuesDp
 
 @Composable
 fun UnderlinedTextInputWithCheckbox(

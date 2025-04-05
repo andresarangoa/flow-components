@@ -1,4 +1,4 @@
-package io.github.kotlin.fibonacci.data.model
+package io.github.kotlin.data.model
 
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp

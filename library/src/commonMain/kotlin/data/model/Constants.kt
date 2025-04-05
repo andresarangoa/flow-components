@@ -1,4 +1,4 @@
-package io.github.kotlin.fibonacci.data.model
+package io.github.kotlin.data.model
 
 object Constants {
 

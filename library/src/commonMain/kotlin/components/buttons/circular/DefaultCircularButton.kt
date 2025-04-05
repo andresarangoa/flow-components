@@ -17,7 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
 import data.model.DefaultCircularButtonState
-import io.github.kotlin.fibonacci.components.buttons.rememberDefaultCircularButtonState
+import io.github.kotlin.components.buttons.rememberDefaultCircularButtonState
 
 @Composable
 fun DefaultCircleButton(

@@ -29,11 +29,11 @@ import components.inputs.basic.HintInputField
 import components.inputs.basic.defaultTheme
 import components.inputs.basic.DecorationBoxBasicTextField
 import data.model.DefaultInputState
-import io.github.kotlin.fibonacci.DecimalFormatterI
-import io.github.kotlin.fibonacci.components.buttons.rememberDefaultInputState
-import io.github.kotlin.fibonacci.data.model.Constants
-import io.github.kotlin.fibonacci.data.model.ConstantsValuesDp.value_dp_5
-import io.github.kotlin.fibonacci.getDecimalFormatter
+import io.github.kotlin.DecimalFormatterI
+import io.github.kotlin.components.buttons.rememberDefaultInputState
+import io.github.kotlin.data.model.Constants
+import io.github.kotlin.data.model.ConstantsValuesDp.value_dp_5
+import io.github.kotlin.getDecimalFormatter
 
 @Composable
 fun CurrencyAmountInputField(

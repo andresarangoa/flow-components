@@ -11,7 +11,7 @@ import androidx.compose.ui.graphics.Color
 import components.inputs.basic.DefaultInputTheme
 import data.model.DefaultInputState
 import data.model.IconVisibility
-import io.github.kotlin.fibonacci.data.model.ConstantsValuesDp
+import io.github.kotlin.data.model.ConstantsValuesDp
 import org.jetbrains.compose.resources.DrawableResource
 
 @Composable

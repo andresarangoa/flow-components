@@ -1,6 +1,5 @@
 package components.inputs.dropDown
 
-
 import Country
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
@@ -30,9 +29,9 @@ import data.model.DefaultInputState
 import io.github.andresarangoa.library.generated.resources.Res
 import io.github.andresarangoa.library.generated.resources.country_flag
 import io.github.andresarangoa.library.generated.resources.phone_number
-import io.github.kotlin.fibonacci.components.buttons.rememberDefaultInputState
-import io.github.kotlin.fibonacci.data.model.ConstantsValuesDp
-import io.github.kotlin.fibonacci.data.model.ConstantsValuesDp.value_dp_30
+import io.github.kotlin.components.buttons.rememberDefaultInputState
+import io.github.kotlin.data.model.ConstantsValuesDp
+import io.github.kotlin.data.model.ConstantsValuesDp.value_dp_30
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 

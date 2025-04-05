@@ -1,4 +1,4 @@
-package io.github.kotlin.fibonacci
+package io.github.kotlin
 
 import androidx.compose.runtime.Composable
 import components.AppColorScheme

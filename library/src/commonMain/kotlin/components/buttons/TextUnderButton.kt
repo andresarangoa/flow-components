@@ -9,8 +9,8 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
-import io.github.kotlin.fibonacci.data.model.ConstantsValuesDp.value_dp_1
-import io.github.kotlin.fibonacci.data.model.ConstantsValuesSp.value_sp_2
+import io.github.kotlin.data.model.ConstantsValuesDp.value_dp_1
+import io.github.kotlin.data.model.ConstantsValuesSp.value_sp_2
 
 @Composable
 fun TextUnderlinedButton(

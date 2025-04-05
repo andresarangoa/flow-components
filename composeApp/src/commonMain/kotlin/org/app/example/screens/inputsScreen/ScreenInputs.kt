@@ -8,8 +8,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material.Scaffold
-import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -26,11 +24,9 @@ import components.inputs.basic.DefaultInputStateImp
 import components.inputs.basic.defaultTheme
 import components.inputs.outlined.OutlinedTextField
 import data.model.IconVisibility
-import io.github.kotlin.fibonacci.components.buttons.rememberDefaultDropdownState
-import io.github.kotlin.fibonacci.data.model.ConstantsValuesDp
+import io.github.kotlin.data.model.ConstantsValuesDp
 import org.app.example.components.FlowUITheme
 import org.app.example.components.LocalCustomColorsPaletteFlow
-import org.jetbrains.compose.resources.stringResource
 
 @Composable
 fun ScreenInputs(component: ScreenInputsComponent) {

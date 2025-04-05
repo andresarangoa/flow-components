@@ -9,10 +9,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.platform.testTag
 import data.model.DefaultInputState
-import io.github.kotlin.fibonacci.components.buttons.getKeyboardFromInputState
-import io.github.kotlin.fibonacci.components.buttons.getVisualTransformation
-import io.github.kotlin.fibonacci.components.buttons.rememberDefaultInputState
-import io.github.kotlin.fibonacci.data.model.ConstantsValuesDp
+import io.github.kotlin.components.buttons.getKeyboardFromInputState
+import io.github.kotlin.components.buttons.getVisualTransformation
+import io.github.kotlin.components.buttons.rememberDefaultInputState
+import io.github.kotlin.data.model.ConstantsValuesDp
 
 @Composable
 fun BasicTextField(

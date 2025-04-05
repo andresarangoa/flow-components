@@ -27,8 +27,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import io.github.kotlin.fibonacci.data.model.ConstantsValuesDp
 import org.app.example.Screens
 import org.app.example.components.LocalCustomColorsPalette
 import org.app.example.components.LocalCustomColorsPaletteFlow

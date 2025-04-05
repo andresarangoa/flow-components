@@ -6,7 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.Dp
-import io.github.kotlin.fibonacci.data.model.ConstantsValuesDp.value_dp_8
+import io.github.kotlin.data.model.ConstantsValuesDp.value_dp_8
 import components.inputs.outlined.OutlinedTextField
 
 @Composable

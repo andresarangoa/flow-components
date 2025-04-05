@@ -13,12 +13,11 @@ import androidx.compose.ui.platform.testTag
 import components.dropdown.DefaultDropDownTheme
 import components.dropdown.defaultDropdownTheme
 import components.inputs.basic.BasicTextField
-
 import components.dropdown.DropDownStateObjImp
 import data.model.DefaultInputState
-import io.github.kotlin.fibonacci.components.buttons.rememberDefaultDropdownState
-import io.github.kotlin.fibonacci.components.buttons.rememberDefaultInputState
-import io.github.kotlin.fibonacci.data.model.Constants.DEFAULT_INPUT_DROPDOWN_ID
+import io.github.kotlin.components.buttons.rememberDefaultDropdownState
+import io.github.kotlin.components.buttons.rememberDefaultInputState
+import io.github.kotlin.data.model.Constants.DEFAULT_INPUT_DROPDOWN_ID
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

@@ -30,8 +30,8 @@ import androidx.compose.ui.unit.sp
 import components.buttons.circular.DefaultCircleButton
 import components.buttons.circular.DefaultCircularButtonImp
 import components.buttons.circular.defaultCircularButtonTheme
-import io.github.kotlin.fibonacci.data.model.ConstantsValuesDp.value_dp_12
-import io.github.kotlin.fibonacci.data.model.ConstantsValuesDp.value_dp_4
+import io.github.kotlin.data.model.ConstantsValuesDp.value_dp_12
+import io.github.kotlin.data.model.ConstantsValuesDp.value_dp_4
 
 @Composable
 fun CardItem(

@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import data.model.DefaultCircularButtonState
-import io.github.kotlin.fibonacci.components.buttons.rememberDefaultCircularButtonState
+import io.github.kotlin.components.buttons.rememberDefaultCircularButtonState
 
 @Composable
 fun CircularButtonBorder(

@@ -10,9 +10,9 @@ import components.dropdown.filledDropdownTheme
 import components.dropdown.DropDownStateObjImp
 import components.dropdown.basic.BasicDropdownField
 import data.model.DefaultInputState
-import io.github.kotlin.fibonacci.components.buttons.rememberDefaultDropdownState
-import io.github.kotlin.fibonacci.components.buttons.rememberDefaultInputState
-import io.github.kotlin.fibonacci.data.model.Constants.FILLED_INPUT_DROPDOWN_ID
+import io.github.kotlin.components.buttons.rememberDefaultDropdownState
+import io.github.kotlin.components.buttons.rememberDefaultInputState
+import io.github.kotlin.data.model.Constants.FILLED_INPUT_DROPDOWN_ID
 
 @Composable
 fun<T> FilledDropdownField(

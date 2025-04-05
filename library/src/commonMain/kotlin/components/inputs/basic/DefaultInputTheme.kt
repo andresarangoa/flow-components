@@ -21,10 +21,10 @@ import components.AppColorScheme
 import components.AppColors
 import components.foundation.CustomIconRes
 import components.foundations.RobotoTypography
-import io.github.kotlin.fibonacci.data.model.ConstantsValuesDp.value_dp_16
-import io.github.kotlin.fibonacci.data.model.ConstantsValuesDp.value_dp_2
-import io.github.kotlin.fibonacci.data.model.ConstantsValuesDp.value_dp_4
-import io.github.kotlin.fibonacci.data.model.ConstantsValuesDp.value_dp_80
+import io.github.kotlin.data.model.ConstantsValuesDp.value_dp_16
+import io.github.kotlin.data.model.ConstantsValuesDp.value_dp_2
+import io.github.kotlin.data.model.ConstantsValuesDp.value_dp_4
+import io.github.kotlin.data.model.ConstantsValuesDp.value_dp_80
 import org.jetbrains.compose.resources.DrawableResource
 
 data class DefaultInputTheme(

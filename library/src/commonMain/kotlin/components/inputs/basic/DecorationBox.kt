@@ -24,12 +24,14 @@ import components.inputs.dropDown.DropdownFlagsAndPhone
 import components.inputs.dropDown.Padding
 import data.model.DefaultInputState
 import data.model.InputTypes
-import io.github.kotlin.fibonacci.components.buttons.rememberDefaultInputState
-import io.github.kotlin.fibonacci.data.model.ConstantsValuesDp
 import components.iconsComponents.IconDefault
 import components.iconsComponents.IconTheme
 import components.utils.modifierDecorationBoxBasic
 import data.model.IconVisibility
+import io.github.kotlin.components.buttons.rememberDefaultInputState
+import io.github.kotlin.data.model.ConstantsValuesDp
+import io.github.kotlin.data.model.ConstantsValuesDp.value_dp_14
+import io.github.kotlin.data.model.ConstantsValuesDp.value_dp_19
 
 @Composable
 internal fun DecorationBoxBasicTextField(
@@ -55,7 +57,7 @@ internal fun DecorationBoxBasicTextField(
         ) {
             Column {
                 if (isInputPhoneType) {
-                    Spacer(Modifier.height(ConstantsValuesDp.value_dp_14))
+                    Spacer(Modifier.height(value_dp_14))
                 }
                 PlaceholderInput(state, modifier, theme)
                 innerTextField()
@@ -75,7 +77,7 @@ internal fun DecorationBoxBasicTextField(
                             .clickable {
                                 state.onIconClick()
                             }
-                            .size(ConstantsValuesDp.value_dp_19))
+                            .size(value_dp_19))
                     }
                 }
             }

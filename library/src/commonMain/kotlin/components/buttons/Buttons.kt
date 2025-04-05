@@ -1,4 +1,4 @@
-package io.github.kotlin.fibonacci.components.buttons
+package io.github.kotlin.components.buttons
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image

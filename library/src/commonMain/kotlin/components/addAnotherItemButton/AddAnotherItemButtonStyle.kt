@@ -1,4 +1,4 @@
-package io.github.kotlin.fibonacci.components.addAnotherItemButton
+package io.github.kotlin.components.addAnotherItemButton
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.shape.RoundedCornerShape
