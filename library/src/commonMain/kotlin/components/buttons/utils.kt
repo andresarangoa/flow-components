@@ -9,6 +9,7 @@ import androidx.compose.ui.text.input.VisualTransformation
 import components.buttons.circular.DefaultCircularButtonImp
 import components.dropdown.DropDownStateObjImp
 import components.inputs.basic.DefaultInputStateImp
+import components.toolbar.DefaultToolbarStateImp
 import data.model.DefaultInputState
 import data.model.InputTypes
 
@@ -31,6 +32,11 @@ fun rememberDefaultCircularButtonState() = rememberSaveable(
 fun rememberDefaultInputState() = rememberSaveable(
     saver = DefaultInputStateImp.Saver
 ) { DefaultInputStateImp() }
+
+@Composable
+fun rememberDefaultToolbarState() = rememberSaveable(
+    saver = DefaultToolbarStateImp.Saver
+) { DefaultToolbarStateImp() }
 
 inline fun <reified T : Any> Any?.checkType(): T? = if (this is T) this
 else null

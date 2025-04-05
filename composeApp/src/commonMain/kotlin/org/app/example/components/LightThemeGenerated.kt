@@ -3,7 +3,7 @@ package org.app.example.components
 import components.AppColorScheme
 
 
-val LightThemeGenerated = AppColorScheme(
+internal val LightThemeGenerated = AppColorScheme(
     surfacePrimary = AppColorsGenerated.white,
     surfaceSecondary = AppColorsGenerated.white,
     surfaceTertiary = AppColorsGenerated.neutral100L,

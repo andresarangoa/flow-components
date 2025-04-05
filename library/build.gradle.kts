@@ -11,7 +11,7 @@ plugins {
 }
 
 group = "io.github.andresarangoa"
-version = "0.1.0-beta03" // Using beta version for testing
+version = "0.1.0-beta09" // Using beta version for testing
 
 kotlin {
     // Your existing configuration

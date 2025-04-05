@@ -10,9 +10,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
+import org.jetbrains.compose.resources.DrawableResource
+import org.jetbrains.compose.resources.painterResource
+
 @Composable
 fun ImageButton(
-    drawableRes: ImageVector,
+    drawableRes: DrawableResource,
     contentDescription: String = "",
     modifier: Modifier = Modifier,
     tint: Color = Color.Black,
@@ -26,7 +29,7 @@ fun ImageButton(
     ) {
         Icon(
             modifier = Modifier.size(40.dp),
-            imageVector = drawableRes,
+            painter = painterResource(drawableRes),
             tint = tint,
             contentDescription = contentDescription
         )

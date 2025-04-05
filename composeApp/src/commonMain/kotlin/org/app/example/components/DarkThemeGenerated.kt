@@ -2,7 +2,7 @@ package org.app.example.components
 
 import components.AppColorScheme
 
-val DarkThemeGenerated = AppColorScheme(
+internal val DarkThemeGenerated = AppColorScheme(
     surfacePrimary = AppColorsGenerated.black,
     surfaceSecondary = AppColorsGenerated.neutral100D,
     surfaceTertiary = AppColorsGenerated.neutral100D,

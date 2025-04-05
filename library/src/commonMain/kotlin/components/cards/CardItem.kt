@@ -30,12 +30,15 @@ import androidx.compose.ui.unit.sp
 import components.buttons.circular.DefaultCircleButton
 import components.buttons.circular.DefaultCircularButtonImp
 import components.buttons.circular.defaultCircularButtonTheme
+import io.github.andresarangoa.library.generated.resources.Res
+import io.github.andresarangoa.library.generated.resources.icon_cancel
 import io.github.kotlin.data.model.ConstantsValuesDp.value_dp_12
 import io.github.kotlin.data.model.ConstantsValuesDp.value_dp_4
+import org.jetbrains.compose.resources.DrawableResource
 
 @Composable
 fun CardItem(
-    icon: ImageVector = Icons.Filled.Cancel,
+    icon: DrawableResource = Res.drawable.icon_cancel,
     backgroundIconColor: Color = Color.Red,
     text: String = "",
     onClick: () -> Unit = {},

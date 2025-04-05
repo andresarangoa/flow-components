@@ -1,6 +1,6 @@
 package io.github.kotlin
 
-import io.github.kotlin.fibonacci.data.model.Constants.LIMIT_SYMBOL_CURRENCY
+import io.github.kotlin.data.model.Constants.LIMIT_SYMBOL_CURRENCY
 import platform.Foundation.NSDate
 import platform.Foundation.timeIntervalSince1970
 

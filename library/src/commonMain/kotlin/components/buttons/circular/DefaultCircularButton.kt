@@ -18,6 +18,7 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
 import data.model.DefaultCircularButtonState
 import io.github.kotlin.components.buttons.rememberDefaultCircularButtonState
+import org.jetbrains.compose.resources.painterResource
 
 @Composable
 fun DefaultCircleButton(
@@ -47,7 +48,7 @@ fun DefaultCircleButton(
                 ) {
                     Icon(
                         modifier = theme.iconModifier,
-                        imageVector = theme.icon,
+                        painter = painterResource(theme.icon),
                         contentDescription = "",
                         tint = theme.iconColor
                     )

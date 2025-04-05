@@ -15,9 +15,9 @@ import io.github.kotlin.data.model.ConstantsValuesSp.value_sp_2
 @Composable
 fun TextUnderlinedButton(
     text: String,
-    onClick: () -> Unit,
     textStyle: TextStyle,
-    color: Color
+    color: Color,
+    onClick: () -> Unit,
 ) {
     Text(
         modifier = Modifier
